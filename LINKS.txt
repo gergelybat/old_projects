@@ -1,0 +1,92 @@
+Twitter API:
+https://twitter.com/settings/devices?success=true&device_id=1711048893
+https://apps.twitter.com/app/9072400/keys
+https://dev.twitter.com/oauth/overview/application-owner-access-tokens
+
+R:
+https://cran.rstudio.com/web/views/Multivariate.html   Principal coordinates / scaling methods
+https://cran.rstudio.com/web/views/Spatial.html
+https://cran.rstudio.com/web/views/Phylogenetics.html
+https://cran.rstudio.com/web/views/SpatioTemporal.html
+https://cran.rstudio.com/web/views/MachineLearning.html
+https://cran.rstudio.com/web/views/HighPerformanceComputing.html
+https://cran.rstudio.com/web/views/Graphics.html
+https://cran.rstudio.com/web/views/DifferentialEquations.html
+https://cran.rstudio.com/web/views/Cluster.html
+
+caret package:  pre process data, fit and evaluate
+
+http://www.drdobbs.com/parallel/the-case-for-d/217801225
+http://colah.github.io/posts/2015-09-Visual-Information/
+http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/
+http://lvdmaaten.github.io/tsne/
+http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf
+
+
+R Advanced:
+http://adv-r.had.co.nz/Environments.html - SUSPENDED
+
+
+Theano:
+http://deeplearning.net/software/theano/tutorial/examples.html#using-shared-variables - ACTIVE
+http://deeplearning.net/software/theano/library/scan.html#module-theano.scan_module - ACTIVE
+http://deeplearning.net/software/theano/library/scan.html#lib-scan - ACTIVE
+http://deeplearning.net/software/theano/tutorial/loop.html#scan - ACTIVE
+
+
+
+Python Tutorial:
+https://www.youtube.com/playlist?list=PLfZeRfzhgQzTMgwFVezQbnpc1ck0I6CQl - DONE
+https://docs.scipy.org/doc/numpy-dev/user/quickstart.html Done
+https://docs.scipy.org/doc/numpy/reference/routines.html - DONE, amennyire érdemes elsőre
+http://pages.physics.cornell.edu/~myers/teaching/ComputationalMethods/python/arrays.html - TODO: még 1x átnézni
+https://docs.python.org/3/library/index.html  - The Python standard library
+
+
+http://www.scipy-lectures.org/ DONE
+http://pandas.pydata.org/pandas-docs/stable/10min.html
+http://nbviewer.ipython.org/github/donnemartin/data-science-ipython-notebooks/blob/master/scikit-learn/scikit-learn-intro.ipynb
+http://nbviewer.ipython.org/github/rhiever/Data-Analysis-and-Machine-Learning-Projects/blob/master/example-data-science-notebook/Example%20Machine%20Learning%20Notebook.ipynb
+https://github.com/justmarkham/scikit-learn-videos/blob/master/05_model_evaluation.ipynb
+
+http://nbviewer.ipython.org/github/craffel/theano-tutorial/blob/master/Theano%20Tutorial.ipynb
+https://github.com/google/deepdream/blob/master/dream.ipynb
+
+DataSciense Tutorials (think bayes, diffeq):
+https://github.com/datasciencemasters/go
+
+
+NLP:
+https://class.coursera.org/nlp/lecture   (NaiveBayes, MaxEnt, EditDistance in Bio)
+	DONE: Basic, EditDistance, Sentiment NEXT: Text Classification: NB rel to LM
+	
+	
+IN THE BROWSER:
+https://docs.scipy.org/doc/numpy-dev/reference/routines.indexing.html
+http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing   Using slicers¶
+http://pandas.pydata.org/pandas-docs/stable/groupby.html#groupby
+
+
+1. 3 papers that I have found interesting in 2015: 
+Flavio Chierichetti, Alessandro Epasto, Ravi Kumar, Silvio Lattanzi, Vahab S. Mirrokni: Efficient Algorithms for Public-Private Social Networks. ACM KDD 2015 
+Liang Zhao, Qian Sun, Jieping Ye, Feng Chen, Chang-Tien Lu, Naren Ramakrishnan: Multi-Task Learning for Spatio-Temporal Event Forecasting. ACM KDD 2015 
+Dimitrios Kotzias, Misha Denil, Nando de Freitas, Padhraic Smyth: From Group to Individual Labels Using Deep Features. ACM KDD 2015 
+
+
+Spark:
+https://github.com/apache/spark/tree/master/examples/src/main/python
+https://github.com/apache/spark/blob/master/examples/src/main/python/sql.py
+https://github.com/apache/spark/blob/master/examples/src/main/python/kmeans.py
+https://github.com/apache/spark/blob/master/examples/src/main/python/pagerank.py
+http://data-frack.blogspot.ro/2015/01/visual-mnemonics-for-pyspark-api.html?_sm_au_=iVVnHjRFB2JWPBdt
+http://nbviewer.ipython.org/github/jkthompson/pyspark-pictures/blob/master/pyspark-pictures.ipynb
+http://spark.apache.org/docs/latest/sql-programming-guide.html
+http://spark.apache.org/docs/latest/graphx-programming-guide.html
+http://spark.apache.org/docs/latest/mllib-guide.html
+http://scikit-learn.org/stable/index.html?_sm_au_=iVVHqM57nMtVkRVk
+http://scikit-learn.org/stable/data_transforms.html
+http://scikit-learn.org/stable/modules/feature_extraction.html
+
+
+Molecular BIology:
+http://biolab.github.io/datafusion-installation-guide/

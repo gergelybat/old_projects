@@ -1,0 +1,408 @@
+WordPress website has PHP
+What is WordPress? A framework for...?
+
+Reddit, Quora,  
+
+
+Topological Data Analysis ?= Networ Analysis (SNA), when you construct the network by connecting nearest nodes
+variational inference?
+Markov Logic Network, PCE Engine
+http://www.shogun-toolbox.org/page/Events/gsoc2014_ideas  - lots of new methods
+
+
+ML frameworks:
+Imperative vs Symbolic:
+Imperative: uses the host language. Easier to write if/then, loops, printing.
+Symbolic: effective
+
+
+http://tensorflow.org/ - Python based
+	TF variables==Theano shared variables. TF paceholders==Theano symbolic variables
+	TODO: megnézni a példákat, hogy optimalizálás nélkül is lehet-e használni
+Theano - Python,numpy/scipy,BLAS,C compiler,  CPU,GPU	Symbolic	more for research, 
+	TODO:	Csak explicit módon, a gradiensek kiszámításával és update-tel lehet használni? Igen.
+			Van megosztott paraméter, vagy nincs? Van, hiszen mindent manuálisan csinálunk.
+			ifelse, scan: gradienst lehet hozzá számolni?
+			scan
+			missing values?
+			http://nbviewer.ipython.org/github/craffel/theano-tutorial/blob/master/Theano%20Tutorial.ipynb - good tutorial also concentrating on OO
+	
+	pyLearn2 (beta) greater flexibility then sklearn, NN via configuration files - no more developers, points to other frameworks
+		sknn
+	Blocks directly annotates the Theano computational graph, ReLU, dropout, AdaGrad, save, load   +Fuel: iterate over data (seq, random, minbatch)
+	Keras (can use also TensorFlow as backend)
+	Passage
+	Lasagne - built in NN layers, combination, activation, dropout, conv, parameter sharing
+		Nolearn (compatible with sklearn)
+	Deepy
+	OpenDeep
+PyBrain Python-Based Reinforcement Learning, Artificial Intelligence and Neural Network Library, inactive(?)
+Torch   Lua, UNIX,EC2   Imperative, more for research
+	OverFeat
+Caffe 	Python,MATLAB, BLAS,boost, CPU,GPU, Models and optimization are defined by configuration without hard-coding: GoogleProtocolBuffer.		more for a mass target
+	SparkNet - Caffe on Spark
+cxxnet  configFile
+Chainer Python, CPU,GPU,  Define-by-Run: The comp.graph can be modified within each iteration e.g.: TruncatedBackPropThroughTime. Does not need any magic to introduce conditionals and loops into the network definitions.
+MXNet	Python,R,Julia Lin,Win, CPU,GPU, BLAS, Distributed(!?)  Symbolic+Imperative
+Minerva Imperative
+CGT(Computation Graph Toolkit)	Python, CPU,GPU 	Symbolic  low level: computation graphs on multiDimArray, autoDiff  +ctg.nn neural networks, ~Theano, but better  
+Pattern Training alg(KNN,SVM,Perceptron) and collecting(web crawler, HTML parser), NLP, Graph
+PyEvolve GA for learning NNs? Evolutionary Computation framework
+Neon	Basic automatic differentiation, convnets, MLPs, RNNs, LSTMs, autoencoders GPU,CPU,Nervana
+NuPIC	brain-inspired machine intelligence platform
+
+
+Mocha is a Deep Learning framework for Julia
+DeepLearnToolbox MATLAB
+Deeplearning4j.org(DL4J) Java, SCALA
+DMLT (Distributed Machine Learning Toolkit) Microsoft C++ BigData/BigModel   on top of Hadoop? 0MQ or MPI? No good tutorial found yet
+ 
+
+DeepLeaning R packages:
+deepnet
+darch
+H2O
+http://www.kdnuggets.com/2015/11/seven-steps-machine-learning-python.html
+http://www.kdnuggets.com/2015/11/petrov-apache-spark-machine-learning-large-data.html
+https://ogirardot.wordpress.com/2015/07/31/from-pandas-to-apache-sparks-dataframe/
+https://lab.getbase.com/pandarize-spark-dataframes/
+
+
+
+
+Analytics
+sklearn
+
+http://www.mlpack.org/about.html C++ library
+
+BigData Analytics
+H2O		Web,Java,R,Python  Win,UNIX,Hadoop,EC2,GCE,Azure  Tabloe->R->H2O, Spark(SparklingWater)
+		SparklingWater has deep learning( realy, like theano, or like nn?)
+HeteroSpark CPU+GPU in cluster
+
+
+
+Cloud based ML:
+IBM Wattson
+Azure ML Microsoft, Cloud, R+Python
+AWS Amazon ML
+Google Prediction API
+BigML
+PredicSis
+
+
+
+
+Word2vec/Doc2vec/GloVe, RBMs and DBNs, Deep Autoencoders, Convolutional Nets, Recursive Neural Tensor Networks
+
+gensim Python topic modelling for humanas
+http://rare-technologies.com/word2vec-tutorial/
+
+
+Representation learning:
+word embeddings = W:words→Rn
+We do that by:
+	learn to predict words from context (surrounding words)
+	or SVD or
+	or dimensionality reduction on the word co-occurrence matrix
+	or ...
+A good word embedding can be used to accomplish for certain task.
+
+NLP:
+Cosine Distance
+Levenshtein Distance (Edit Distance)
+LSA (SVD, NMF)
+LDA (thin wrapper around LSA)
+Pachinko Allocation 
+Word2vec
+	paragraph2vec(http://cs.stanford.edu/~quocle/paragraph_vector.pdf)
+	doc2vec
+https://en.wikipedia.org/wiki/Locality-sensitive_hashing  (for spam detection, where small changes are made to the same text)
+	
+WordNet based (human verified, though hardly extensible)
+Python package: gensim 
+
+	
+Data Technology:
+http://dask.pydata.org/en/latest/index.html - paralell, on disk (+on cluster) DataFrame interface
+Hadoop
+
+Blaze: NumPy and Pandas syntax to Big Data - push-down
+
+Alluxio formely Tychoon: in memory database, sits between computation frameworks, such as Spark,MR,Flink, and various types of storage systems, including Amazon S3, HDFS, Ceph, and others. Data sharing at memory-speed across cluster jobs.
+
+ingest data from ElasticSearch into spark (What does this mean?)
+
+Redis: in-memory NoSQL data store, key-value, with complex data types, with possible persistence (snapshots)
+
+
+PyData ecosystem:
+http://docs.scipy.org/doc/numpy/user/
+http://statsmodels.sourceforge.net/stable/ - reg(lin, robust, mixed, survival), nonparametric, glm, timeseries(VAR, ARIMA, )graphs
+http://docs.scipy.org/doc/scipy/reference/ - functions, linalg, stat, cluster, integrate, optimize, signal, spatial, csgraph, ndimage, sparse, orthogonal
+http://pandas.pydata.org/ - data structures(Series,DataFrame,Panel), data step, basic stat and graph
+patsy - model matrix creation in Python in R style (MODEL, CLASS, EFFECT)
+http://cvxopt.org/  Convex Opt in Python
+
+
+
+BI, Graphing
+Plotly - site based?(everything is posted on the web?), but those don't support interactive vizualizations. D3.js
+Tabloe:  can scripts be included?
+Shiny by RStudio: there is interaction with server side!
+	shinyAce
+shiny boostrap
+shinyBS   felugró ablakok, plussz dolgok
+shinydashboard   könnyebb dashboardot csinálni.  Streaming elég egyszerűnek tűnik
+	shinyFiles  file böngésző, shinyjs, shinyRGL   3D grafika, shinystan bayes, shinythemes témák azaz style sheetek, shinyTree  interaktív fa ábrázolás
+	Egy csomó Shiny package/add-on, ami különbőző (statisztikai)területeket céloz meg: factor elemzés, bayes... Minden amit eddig az alkalmazások statikus formában köptek i magukból
+	shinySignals
+http://elm-lang.org/ functional programming in your browser
+http://www.ggobi.org/   (Java plug-in needed?)    R API: rggoby
+Bokeh is a Python interactive visualization library
+Spyre is a Web Application Framework for providing a simple user interface for Python data projects.
+d3js.org - Data-Driven Documents (not Python)
+Pyxley: Python Powered Dashboards
+Pandas ecosystem: Bokeh, yhat/ggplot, Seaborn,
+Vincent: A Python to Vega translator - development frozen
+Vega: Interactive visualization grammar, a declarative format. JSON to HTML or SVG.  Vega can run in node.js
+matplotlib
+	Seaborn
+ggplot2
+ggvis interactive in browser
+pygal
+matplotly : the most basic and complex (Pandas, Seaborn, ggplot wraps it)
+
+web:
+leaflet.js  mapping
+	folium - python library for leaflet.js: markers,circle,hoover,cloropeth
+python-nvd3:     there is also a django-nvd3
+nvd3: re-usable charts and chart components for d3.js
+
+Graph vizualization:
+Graphviz
+Gephi
+Sigma.js
+	Linkuriuous.js
+
+
+desktop:
+glue: Python library to explore relationships within and among related datasets. GUI!! mainly for astro image analysis http://www.glueviz.org/en/stable/
+Chaco: interactive vizu			
+vispy:  Python library for interactive scientific visualization. GPU,fast,scalable,realtime,Scientific GUIs(?)
+pygal: charts with python
+Templating languages:
+Django
+jonja2:  templating language for Python, modelled after Django’s templates
+
+
+Graph Mining:
+Pregel APIs:
+	Giraph, GraphLab, Graph-X
+http://arabesque.io/user_guide.html Hadoop(Maven, runs as an Apache Giraph Job)
+	- finding cliques, counting motifs and frequent subgraph mining, etc...
+Spark-GraphX
+igraph
+neo4j
+
+
+Image Processing Libaries:
+PIL
+OpenCV
+
+Pretrained NNs:
+GoogleNet
+
+Descrete Event Sim:
+https://www.nsnam.org/
+
+hiper parameter tuning:
+Caret is a hpt package?
+grid, random, bayesien?
+
+ensemble learning - bagging, boosting, stacking, blending, bayesian averaging etc., cascading (one model ata time, if not reject, then the next)
+
+HMM:
+http://ghmm.org/
+http://gekkoquant.com/2014/05/18/hidden-markov-models-model-description-part-1-of-4/
+PyMc, PyMix
+sklearn(?)
+https://github.com/hmmlearn/hmmlearn
+
+relevance vector machine
+
+
+Programming Languages:
+JavaScript libraries: 
+JQuery, more modern: Angular, Backbone, Knockout
+React
+D3.js
+
+Scala
+Haskel
+Clojure
+
+cost sensitive learning
+	where it is implemented in R or Python?
+	Trees, SVM, Reg?
+
+	
+Computational Biology
+
+
+Lessons learned:
+If target has many categories, it is possible to use hierarchical classifier. Hierarch can be random or obtained from external source(WordNet).
+Regularizing can be based on: weights, hidden layers output, smoothens of the output function (function and derivates), smoothens of hidden layers.
+There is hierarchical LDA. Is there a hierarchical SVD?? NN on the users + NN on the items?
+Combining CF (NMF) with external attributes: http://arxiv.org/pdf/1510.07867v1.pdf
+
+
+Matrix and Tensor factorization:
+http://stats.stackexchange.com/questions/178442/state-of-the-art-in-collaborative-filtering?newsletter=1&nlcode=467989%7cda55
+
+collective matric factorization: http://helikoid.si/embc15/embc-handouts.pdf
+movie-rating+movie-actor+movie-genre  How it is done? Shared spaces. One big table?
+
+
+Hadoop distributions:
+Coudera (Impala+Parquett+...)
+HortonWorks
+Apache Tez is an extensible framework for building high performance batch and interactive data processing applications, coordinated by YARN in Apache Hadoop.
+Pivotal
+IBMBigInsight
+MapR
+
+Serialization:
+Avro, Thrift, Protocol Buffers, JSON, BSON, Sequence Files, Parquet, RCFile, ORC, SequenceFile, Google Protocol Buffers, XML
+Compression:
+Snappy, LZO
+
+Apache Maven: Apache Maven is a software project management and comprehension tool.
+GitHub: Powerful collaboration, code review, and code management for open source and private projects.
+
+Apache Hadoop
+Apache HDFS - distributed filesystem
+Hadoop YARN - resource manager
+Hadoop MapReduce  a programming model for large scale data processing + some jars. Originaly it provided also resource management, but YARN took it.
+Apache Pig: Saját nyelv pipeline-ok írásához
+Hadoop Hive - HQL interfészt varázsol a tárolt file-okhoz.
+Hadoop HCatalog - ide beregisztrálhatod a SerDe-t és az input/output formátumot. Default regisztrációk: RCFile, CSV, JSON, SequenceFile, ORC
+Apache Crunch: Java-ban lehet írni MapReduce pipeline-t
+Apache ZooKeeper: highly reliable distributed coordination: lock, telepítõ
+Apache Curator is a high-level API that simplifies using ZooKeeper
+Apache Oozie: Workflow Scheduler for Hadoop, Java Web application used to schedule Apache Hadoop jobs: Timing and Flows
+Apache Thrift: framework, for scalable cross-language services development
+Apache Sentry (incubating): Security
+Apache Hue: A web interface to all the stuff
+Apache Mesos: your datacenter like it is a single pool of resources. Abstracts all resources for applications in a distributed framework (the basis for everything, also Hadoop)
+
+
+Apache Spark: Distributed calc with Scala, Java, Python interface, runs on YARN,Mesos,standalone
+	Spark DataFrame
+	Spark DataTable(?)
+	SparkSQL
+		JDBC,ODBC,Hive,Text,JSON,...
+		Analytics alongside SQL
+	MLlib: scalable machine learning library
+		DataTypes
+		Statistic: summaries,corr, sampling, randomNumGen, hypothesis testin(Chi-square)
+		Supervised: Reg,LASSO,SVM, Tree,Forest,GradientBoost, NaiveBayes, IsotonicReg
+		Unsupervised: Clustering(kMeans,GaussMix,PIC,LDA), PCA, SVD, Assoc(FP-growth)
+		SGD, L-BFGS
+	GraphX: graphs and graph-parallel computation
+		Pregel API: iterative (parallel) graph processing
+		PageRank
+		ConnComp
+		TiangeCount
+	GraphFrame: like GraphX, but based on DataFrames 
+	ScalaNLP
+		Breeze is a numerical processing library for Scala.
+		Epic is a high performance statistical parser written in Scala, along with a framework for building complex structured prediction models. http://scalanlp.org/
+			parsers (result is a tree), sequence labelers (result is labelled words), and segmenters (results can be noun groups)
+		Puck is an insanely fast GPU-powered parser,
+
+
+
+Apache Mahout: Machine Learning algorithms implemented on Hadoop
+
+
+H2O: open source predictive analytics platform, R, Python, Scala, Java, REST API. It is an interface to Hadoop and SPARK
+
+
+Streaming frameworks:
+Apache Flume is a distributed, reliable, and available service for efficiently collecting, aggregating, and moving large amounts of log data.
+Apache Storm: Streaming. Processing is defined in DAG.  No state persistence, but Trident does it.
+Apache Kafka is publish-subscribe messaging rethought as a distributed commit log. (Hadoop független)
+Apache Flink streaming dataflow engine that provides data distribution, communication, and fault tolerance for distributed computations over data streams. +ML(small) +Graph. Treating batch processes as a special case of streaming.
+Samza built on Kafka+YARN
+Apex processes big data in-motion in a highly scalable, highly performant, fault tolerant, stateful, secure, distributed, and an easily operable way.
+Apache Samza is a distributed stream processing framework. It uses Apache Kafka for messaging, and Apache Hadoop YARN to provide fault tolerance, processor isolation, security, and resource management.
+RabbitMQ, ActiveMQ, ZeroMQ: messaging 
+ZeroMQ, Twitter, 
+
+
+Google Protocol-buffers: interface description language and framework for C,Java,Python,...
+JSON
+XML
+
+
+http://spatialhadoop.cs.umn.edu/
+
+Apache Drill: Schema free, noSQL query language fo Hadoop. Low latency.
+~Google BigTable like databases:
+	Apache Accumulo
+	HBase
+	Hypertable
+	Cassandra (Hadoop független)
+Apache CouchDB:  is a database that uses JSON for documents, JavaScript for MapReduce queries, and regular HTTP for an API (Hadoop független)
+
+Efficient DBs:
+LevelDB open source on-disk key-value store  Snappy compression,batching writes, forward and backward iteration
+LMDB software library that provides a high-performance embedded transactional database in the form of a key-value store multi-processing environment one writer, multi reader
+
+
+noSQL databases:
+Columnar Databases - HBase, Hadoop, Cassandra
+Key Value Stores - Couchbase, Redis, DynamoDB, Membase, Hbase
+Document stores - MongoDB, CouchDB
+Graph databases - Neo4j, Infinite Graph
+Tachyon is a memory-centric distributed storage system
+Node.js, Mule
+
+Compute Service providers:
+Amazon Web Services (AWS): Amazon Elastic Compute Cloud (EC2), Amazon S3 (Simple Storage Service), EMR, Redshift
+Google Compute Engine
+Microsoft's Windows Azure
+
+
+Presto is a distributed SQL query engine designshared	 industry	 efforted to query large data sets distributed over one or more heterogeneous data sources. By Facebook.
+Apache Ambari project is aimed at making Hadoop management simpler by developing software for provisioning, managing, and monitoring Apache Hadoop clusters. WebUI RESTfull.
+Open Data Platform Initiative: shared industry effort on BigData. ODP will test and certify Apache software.	
+
+
+
+Statistical, visual software for teaching:
+JMP, SAS, Minitab : costs money
+http://www.statistiklabor.de/en/ : R based, interactive, development inished in 2011?
+http://gretl.sourceforge.net/  - TimeSeries
+http://rapid-i.com/
+http://statpages.info/javasta2.html
+http://www.predictiveanalyticstoday.com/top-free-statistical-software/
+http://adamsoft.sourceforge.net/index.html
+ScaVis
+
+
+DevOps:
+Unit tests:
+Nose Tox Unittest, doctest mock
+
+assebly tools:
+make
+
+Virtualization:
+VMWare
+VirtualBox
+Docker: something you can use to run UNIX on Win...
+
+Environments:
+conda (mainly for Python)
